@@ -1,5 +1,5 @@
 <view class="container">
-  <view class="screen-shell">
+  <view class="screen-shell index-shell">
     <view class="title">塔罗随身占卜</view>
     <view class="subtitle">随时随地，抽取你的今日指引</view>
 
@@ -12,19 +12,14 @@
       bindinput="onQuestionInput"
     />
 
-    <view class="label">选择牌阵</view>
+    <view class="label spread-label">选择牌阵</view>
     <picker mode="selector" range="{{spreadLabels}}" value="{{spreadIndex}}" bindchange="onSpreadChange">
       <view class="picker">{{spreadLabels[spreadIndex]}}</view>
     </picker>
 
-    <view class="switch-row">
-      <text>启用逆位（更细致）</text>
-      <switch checked="{{allowReversed}}" bindchange="onReverseChange" color="#8759c7" />
-    </view>
-
-    <button class="primary-btn" bindtap="startReading">开始占卜</button>
-    <button class="secondary-btn" bindtap="goHistory">查看历史记录</button>
-
-    <view class="light-note">塔罗用于自我觉察，不替代现实决策责任。</view>
+    <button class="primary-btn action-main" bindtap="startReading">开始占卜</button>
+    <button class="secondary-btn action-sub" bindtap="goHistory">查看历史记录</button>
   </view>
+
+  <view class="page-caption">首页示意图</view>
 </view>

@@ -6,7 +6,7 @@ const app = getApp();
 Page({
   data: {
     question: "",
-    spreadIndex: 0,
+    spreadIndex: 2,
     spreadOptions: tarot.getSpreadOptions(),
     spreadLabels: tarot.getSpreadOptions().map((item) => item.label),
     allowReversed: true

@@ -1,6 +1,6 @@
 <view class="container">
-  <view class="screen-shell" wx:if="{{history.length}}">
-    <view class="title">最近占卜</view>
+  <view class="screen-shell history-shell" wx:if="{{history.length}}">
+    <view class="title history-title">最近占卜</view>
     <view class="subtitle">点击任意记录可查看详情</view>
 
     <view class="history-item" wx:for="{{history}}" wx:key="id" data-id="{{item.id}}" bindtap="openReading">
@@ -12,12 +12,14 @@
       <view class="item-summary">{{item.summary}}</view>
     </view>
 
-    <button class="secondary-btn" bindtap="clearHistory">清空历史</button>
+    <button class="secondary-btn clear-btn" bindtap="clearHistory">清空历史</button>
   </view>
 
-  <view class="screen-shell empty" wx:else>
-    <view class="title">还没有历史记录</view>
+  <view class="screen-shell history-shell empty" wx:else>
+    <view class="title history-title">还没有历史记录</view>
     <view class="subtitle">先去抽一组塔罗牌吧</view>
-    <button class="primary-btn" bindtap="goIndex">去占卜</button>
+    <button class="primary-btn clear-btn" bindtap="goIndex">去占卜</button>
   </view>
+
+  <view class="page-caption">历史页示意图</view>
 </view>

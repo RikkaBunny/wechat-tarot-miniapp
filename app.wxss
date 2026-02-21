@@ -18,7 +18,7 @@ page {
 }
 
 .container {
-  padding: 30rpx;
+  padding: 0 40rpx 40rpx;
 }
 
 .screen-shell {
@@ -26,28 +26,23 @@ page {
   border-radius: 28rpx;
   border: 1rpx solid #e8def7;
   box-shadow: 0 10rpx 24rpx rgba(46, 36, 65, 0.08);
-  padding: 24rpx;
-}
-
-.panel {
-  background: #fff;
-  border-radius: 24rpx;
-  padding: 24rpx;
 }
 
 .title {
-  font-size: 42rpx;
+  font-size: 40rpx;
   font-weight: 700;
+  line-height: 1.2;
 }
 
 .subtitle {
-  margin-top: 10rpx;
-  font-size: 26rpx;
+  margin-top: 16rpx;
+  font-size: 24rpx;
   color: var(--muted);
+  line-height: 1.4;
 }
 
 .label {
-  margin: 24rpx 0 14rpx;
+  margin: 40rpx 0 20rpx;
   font-size: 28rpx;
   font-weight: 600;
 }
@@ -61,22 +56,33 @@ button::after {
 }
 
 .primary-btn {
-  margin-top: 30rpx;
+  width: 100%;
+  margin-top: 0;
   background: var(--accent);
   color: #fff;
   border-radius: 999rpx;
   font-size: 30rpx;
+  font-weight: 700;
   height: 86rpx;
   line-height: 86rpx;
 }
 
 .secondary-btn {
-  margin-top: 16rpx;
+  width: 100%;
+  margin-top: 0;
   border-radius: 999rpx;
   border: 1rpx solid var(--accent);
   color: var(--accent);
   background: #fff;
   font-size: 30rpx;
+  font-weight: 700;
   height: 86rpx;
   line-height: 86rpx;
+}
+
+.page-caption {
+  margin-top: 44rpx;
+  text-align: center;
+  color: #8b809e;
+  font-size: 22rpx;
 }

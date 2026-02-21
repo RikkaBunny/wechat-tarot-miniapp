@@ -1,8 +1,7 @@
 <view class="container" wx:if="{{reading}}">
-  <view class="screen-shell">
-    <view class="title">{{reading.spreadLabel}}</view>
-    <view class="meta">时间：{{reading.createdAt}}</view>
-    <view class="question" wx:if="{{reading.question}}">问题：{{reading.question}}</view>
+  <view class="screen-shell result-shell">
+    <view class="title result-title">{{reading.spreadLabel}}</view>
+    <view class="meta" wx:if="{{reading.question}}">问题：{{reading.question}}</view>
     <view class="summary">{{reading.summary}}</view>
 
     <view class="card-list">
@@ -16,18 +15,17 @@
         </view>
         <view class="keywords">关键词：{{item.keywords}}</view>
         <view class="advice">建议：{{item.advice}}</view>
-        <view class="arcana">{{item.arcana}} · {{item.theme}}</view>
       </view>
     </view>
-
-    <button class="primary-btn" bindtap="goAgain">再抽一次</button>
-    <button class="secondary-btn" bindtap="goHistory">历史记录</button>
   </view>
+
+  <view class="page-caption">结果页示意图</view>
 </view>
 
 <view class="container" wx:else>
-  <view class="screen-shell empty">
-    <view class="title">暂无占卜结果</view>
-    <button class="primary-btn" bindtap="goAgain">去占卜</button>
+  <view class="screen-shell result-shell empty">
+    <view class="title result-title">暂无占卜结果</view>
+    <view class="subtitle">请先返回首页完成抽牌</view>
+    <button class="primary-btn fallback-btn" bindtap="goAgain">去占卜</button>
   </view>
 </view>
