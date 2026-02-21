@@ -1,5 +1,6 @@
 App({
   globalData: {
-    currentReading: null
+    currentReading: null,
+    launchAnimationShown: false
   }
 });

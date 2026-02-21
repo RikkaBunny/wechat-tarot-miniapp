@@ -10,24 +10,72 @@
 }
 
 .meta,
-.summary {
+.summary,
+.flip-tip {
   margin-top: 20rpx;
   line-height: 1.6;
   color: #5f5374;
   font-size: 22rpx;
 }
 
+.flip-tip {
+  color: #7a6e91;
+}
+
 .card-list {
   margin-top: 30rpx;
 }
 
-.card-item {
+.flip-card {
   margin-bottom: 30rpx;
-  min-height: 220rpx;
-  padding: 18rpx 30rpx;
+  min-height: 250rpx;
+  perspective: 1200rpx;
+}
+
+.flip-inner {
+  position: relative;
+  min-height: 250rpx;
+  height: 250rpx;
+  transform-style: preserve-3d;
+  transition: transform 0.6s ease;
+}
+
+.flip-card.flipped .flip-inner {
+  transform: rotateY(180deg);
+}
+
+.flip-face {
+  position: absolute;
+  inset: 0;
   border-radius: 18rpx;
-  background: #f8f3ff;
+  backface-visibility: hidden;
   box-sizing: border-box;
+  padding: 18rpx 30rpx;
+}
+
+.flip-front {
+  background: linear-gradient(160deg, #4a2f71, #8759c7);
+  color: #efe6ff;
+  border: 1rpx solid #9872cf;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 14rpx;
+}
+
+.front-position {
+  font-size: 24rpx;
+  opacity: 0.9;
+}
+
+.front-title {
+  font-size: 34rpx;
+  font-weight: 700;
+}
+
+.flip-back {
+  transform: rotateY(180deg);
+  background: #f8f3ff;
 }
 
 .card-head {
@@ -72,6 +120,14 @@
   font-size: 22rpx;
   color: #5f5374;
   line-height: 1.6;
+}
+
+.action-main {
+  margin-top: 10rpx;
+}
+
+.action-sub {
+  margin-top: 18rpx;
 }
 
 .empty {

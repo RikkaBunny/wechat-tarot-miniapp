@@ -3,20 +3,39 @@
     <view class="title result-title">{{reading.spreadLabel}}</view>
     <view class="meta" wx:if="{{reading.question}}">问题：{{reading.question}}</view>
     <view class="summary">{{reading.summary}}</view>
+    <view class="flip-tip">请逐张点击牌面翻看解读</view>
 
     <view class="card-list">
-      <view class="card-item" wx:for="{{reading.cards}}" wx:key="index">
-        <view class="card-head">
-          <view>
-            <view class="position">{{item.position}}</view>
-            <view class="card-name">{{item.name}}</view>
+      <view
+        class="flip-card {{item.flipped ? 'flipped' : ''}}"
+        wx:for="{{displayCards}}"
+        wx:key="index"
+        data-index="{{index}}"
+        bindtap="onFlipCard"
+      >
+        <view class="flip-inner">
+          <view class="flip-face flip-front">
+            <view class="front-position">{{item.position}}</view>
+            <view class="front-title">点击翻牌</view>
           </view>
-          <view class="orientation {{item.reversed ? 'reversed' : 'upright'}}">{{item.orientation}}</view>
+
+          <view class="flip-face flip-back">
+            <view class="card-head">
+              <view>
+                <view class="position">{{item.position}}</view>
+                <view class="card-name">{{item.name}}</view>
+              </view>
+              <view class="orientation {{item.reversed ? 'reversed' : 'upright'}}">{{item.orientation}}</view>
+            </view>
+            <view class="keywords">关键词：{{item.keywords}}</view>
+            <view class="advice">建议：{{item.advice}}</view>
+          </view>
         </view>
-        <view class="keywords">关键词：{{item.keywords}}</view>
-        <view class="advice">建议：{{item.advice}}</view>
       </view>
     </view>
+
+    <button class="primary-btn action-main" bindtap="goAgain">再抽一次</button>
+    <button class="secondary-btn action-sub" bindtap="goHistory">历史记录</button>
   </view>
 
   <view class="page-caption">结果页示意图</view>

@@ -9,7 +9,33 @@ Page({
     spreadIndex: 2,
     spreadOptions: tarot.getSpreadOptions(),
     spreadLabels: tarot.getSpreadOptions().map((item) => item.label),
-    allowReversed: true
+    allowReversed: true,
+    showLaunchAnimation: false
+  },
+
+  onLoad() {
+    if (!app.globalData.launchAnimationShown) {
+      app.globalData.launchAnimationShown = true;
+      this.setData({ showLaunchAnimation: true });
+      this.launchTimer = setTimeout(() => {
+        this.setData({ showLaunchAnimation: false });
+      }, 1700);
+    }
+  },
+
+  onUnload() {
+    if (this.launchTimer) {
+      clearTimeout(this.launchTimer);
+      this.launchTimer = null;
+    }
+  },
+
+  skipLaunchAnimation() {
+    if (this.launchTimer) {
+      clearTimeout(this.launchTimer);
+      this.launchTimer = null;
+    }
+    this.setData({ showLaunchAnimation: false });
   },
 
   onQuestionInput(event) {

@@ -22,4 +22,14 @@
   </view>
 
   <view class="page-caption">首页示意图</view>
+
+  <view class="launch-mask" wx:if="{{showLaunchAnimation}}" bindtap="skipLaunchAnimation">
+    <view class="launch-stage">
+      <view class="launch-card">
+        <view class="launch-face launch-face-back">TAROT</view>
+        <view class="launch-face launch-face-front">命运展开中</view>
+      </view>
+      <view class="launch-tip">点击可跳过动画</view>
+    </view>
+  </view>
 </view>

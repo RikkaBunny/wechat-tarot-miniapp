@@ -62,3 +62,72 @@
   line-height: 78rpx;
   font-size: 28rpx;
 }
+
+.launch-mask {
+  position: fixed;
+  inset: 0;
+  z-index: 999;
+  background: rgba(22, 17, 35, 0.72);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.launch-stage {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 30rpx;
+}
+
+.launch-card {
+  width: 320rpx;
+  height: 470rpx;
+  position: relative;
+  transform-style: preserve-3d;
+  animation: launchFlip 1.3s ease-out forwards;
+}
+
+.launch-face {
+  position: absolute;
+  inset: 0;
+  border-radius: 24rpx;
+  border: 2rpx solid #e3d8f6;
+  backface-visibility: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: 20rpx;
+  box-sizing: border-box;
+}
+
+.launch-face-back {
+  background: linear-gradient(160deg, #301f4c, #8759c7);
+  color: #efe6ff;
+  font-size: 44rpx;
+  letter-spacing: 4rpx;
+  font-weight: 700;
+}
+
+.launch-face-front {
+  background: #fffdf8;
+  color: #4d3d6f;
+  font-size: 38rpx;
+  font-weight: 700;
+  transform: rotateY(180deg);
+}
+
+.launch-tip {
+  color: #f1e8ff;
+  font-size: 24rpx;
+}
+
+@keyframes launchFlip {
+  0% {
+    transform: rotateY(0deg);
+  }
+  100% {
+    transform: rotateY(180deg);
+  }
+}
