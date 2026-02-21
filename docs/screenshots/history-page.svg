@@ -1,0 +1,36 @@
+<svg width="720" height="1280" viewBox="0 0 720 1280" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#fbf8f0"/>
+      <stop offset="100%" stop-color="#f2edf9"/>
+    </linearGradient>
+  </defs>
+  <rect width="720" height="1280" fill="url(#bg)"/>
+  <rect x="40" y="100" width="640" height="1040" rx="28" fill="#fffdf8" stroke="#e8def7"/>
+
+  <text x="80" y="176" font-size="38" font-family="Arial, sans-serif" fill="#2e2441" font-weight="700">最近占卜</text>
+  <text x="80" y="214" font-size="22" font-family="Arial, sans-serif" fill="#8b809e">点击任意记录可查看详情</text>
+
+  <rect x="80" y="260" width="560" height="190" rx="18" fill="#f8f3ff"/>
+  <text x="110" y="308" font-size="30" font-family="Arial, sans-serif" fill="#2e2441" font-weight="700">三张决策盘</text>
+  <text x="470" y="308" font-size="20" font-family="Arial, sans-serif" fill="#9086a4">2026/2/21</text>
+  <text x="110" y="346" font-size="22" font-family="Arial, sans-serif" fill="#5f5374">我该不该换工作？</text>
+  <text x="110" y="382" font-size="22" font-family="Arial, sans-serif" fill="#5f5374">重点落在事业与关系，先稳住节奏再推进。</text>
+
+  <rect x="80" y="480" width="560" height="190" rx="18" fill="#f8f3ff"/>
+  <text x="110" y="528" font-size="30" font-family="Arial, sans-serif" fill="#2e2441" font-weight="700">关系洞察</text>
+  <text x="470" y="528" font-size="20" font-family="Arial, sans-serif" fill="#9086a4">2026/2/20</text>
+  <text x="110" y="566" font-size="22" font-family="Arial, sans-serif" fill="#5f5374">这段关系是否值得继续？</text>
+  <text x="110" y="602" font-size="22" font-family="Arial, sans-serif" fill="#5f5374">沟通与边界是关键，避免情绪化决策。</text>
+
+  <rect x="80" y="700" width="560" height="190" rx="18" fill="#f8f3ff"/>
+  <text x="110" y="748" font-size="30" font-family="Arial, sans-serif" fill="#2e2441" font-weight="700">单张指引</text>
+  <text x="470" y="748" font-size="20" font-family="Arial, sans-serif" fill="#9086a4">2026/2/18</text>
+  <text x="110" y="786" font-size="22" font-family="Arial, sans-serif" fill="#5f5374">我现在最该做什么？</text>
+  <text x="110" y="822" font-size="22" font-family="Arial, sans-serif" fill="#5f5374">先完成最重要的一件事，再扩展任务。</text>
+
+  <rect x="80" y="940" width="560" height="86" rx="43" fill="#ffffff" stroke="#8759c7"/>
+  <text x="300" y="994" font-size="30" font-family="Arial, sans-serif" fill="#8759c7" font-weight="700">清空历史</text>
+
+  <text x="255" y="1200" font-size="22" font-family="Arial, sans-serif" fill="#8b809e">历史页示意图</text>
+</svg>

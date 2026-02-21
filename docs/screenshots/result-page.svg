@@ -1,0 +1,40 @@
+<svg width="720" height="1280" viewBox="0 0 720 1280" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#fbf8f0"/>
+      <stop offset="100%" stop-color="#f2edf9"/>
+    </linearGradient>
+  </defs>
+  <rect width="720" height="1280" fill="url(#bg)"/>
+  <rect x="40" y="80" width="640" height="1120" rx="28" fill="#fffdf8" stroke="#e8def7"/>
+
+  <text x="80" y="150" font-size="38" font-family="Arial, sans-serif" fill="#2e2441" font-weight="700">三张决策盘</text>
+  <text x="80" y="188" font-size="22" font-family="Arial, sans-serif" fill="#8b809e">问题：我该不该换工作？</text>
+  <text x="80" y="228" font-size="22" font-family="Arial, sans-serif" fill="#5f5374">整体阻力偏多，先稳住节奏再推进。</text>
+
+  <rect x="80" y="270" width="560" height="220" rx="18" fill="#f8f3ff"/>
+  <text x="110" y="320" font-size="22" font-family="Arial, sans-serif" fill="#8b809e">现状</text>
+  <text x="110" y="358" font-size="32" font-family="Arial, sans-serif" fill="#2e2441" font-weight="700">权杖骑士</text>
+  <rect x="470" y="305" width="130" height="44" rx="22" fill="#fff1ed"/>
+  <text x="502" y="334" font-size="22" font-family="Arial, sans-serif" fill="#be5e46">逆位</text>
+  <text x="110" y="400" font-size="22" font-family="Arial, sans-serif" fill="#5f5374">关键词：行动受阻、节奏失衡</text>
+  <text x="110" y="435" font-size="22" font-family="Arial, sans-serif" fill="#5f5374">建议：先处理情绪和阻力再推进</text>
+
+  <rect x="80" y="520" width="560" height="220" rx="18" fill="#f8f3ff"/>
+  <text x="110" y="570" font-size="22" font-family="Arial, sans-serif" fill="#8b809e">挑战</text>
+  <text x="110" y="608" font-size="32" font-family="Arial, sans-serif" fill="#2e2441" font-weight="700">月亮</text>
+  <rect x="470" y="555" width="130" height="44" rx="22" fill="#eaf8f2"/>
+  <text x="502" y="584" font-size="22" font-family="Arial, sans-serif" fill="#2f9e73">正位</text>
+  <text x="110" y="650" font-size="22" font-family="Arial, sans-serif" fill="#5f5374">关键词：潜意识、未知、敏感</text>
+  <text x="110" y="685" font-size="22" font-family="Arial, sans-serif" fill="#5f5374">建议：先看清真实动机再决策</text>
+
+  <rect x="80" y="770" width="560" height="220" rx="18" fill="#f8f3ff"/>
+  <text x="110" y="820" font-size="22" font-family="Arial, sans-serif" fill="#8b809e">建议</text>
+  <text x="110" y="858" font-size="32" font-family="Arial, sans-serif" fill="#2e2441" font-weight="700">星币A</text>
+  <rect x="470" y="805" width="130" height="44" rx="22" fill="#eaf8f2"/>
+  <text x="502" y="834" font-size="22" font-family="Arial, sans-serif" fill="#2f9e73">正位</text>
+  <text x="110" y="900" font-size="22" font-family="Arial, sans-serif" fill="#5f5374">关键词：务实机会、启动新计划</text>
+  <text x="110" y="935" font-size="22" font-family="Arial, sans-serif" fill="#5f5374">建议：先小步试错，逐步加码</text>
+
+  <text x="255" y="1168" font-size="22" font-family="Arial, sans-serif" fill="#8b809e">结果页示意图</text>
+</svg>
