@@ -24,12 +24,36 @@
   <view class="page-caption">首页示意图</view>
 
   <view class="launch-mask" wx:if="{{showLaunchAnimation}}" bindtap="skipLaunchAnimation">
+    <view class="magic-bg">
+      <view class="spark spark-1"></view>
+      <view class="spark spark-2"></view>
+      <view class="spark spark-3"></view>
+      <view class="spark spark-4"></view>
+    </view>
+
     <view class="launch-stage">
+      <view class="launch-aura"></view>
       <view class="launch-card">
-        <view class="launch-face launch-face-back">TAROT</view>
-        <view class="launch-face launch-face-front">命运展开中</view>
+        <view class="launch-face launch-face-back">
+          <view class="card-frame card-frame-outer"></view>
+          <view class="card-frame card-frame-inner"></view>
+          <view class="clow-symbol">
+            <view class="clow-wing wing-left"></view>
+            <view class="clow-core-ring"></view>
+            <view class="clow-core-dot"></view>
+            <view class="clow-wing wing-right"></view>
+            <view class="clow-star">✦</view>
+          </view>
+          <view class="clow-label">库洛牌</view>
+        </view>
+
+        <view class="launch-face launch-face-front">
+          <view class="card-frame card-frame-outer"></view>
+          <view class="card-frame card-frame-inner"></view>
+          <view class="reveal-title">命运之门已开启</view>
+          <view class="reveal-sub">点击任意位置进入占卜</view>
+        </view>
       </view>
-      <view class="launch-tip">点击可跳过动画</view>
     </view>
   </view>
 </view>

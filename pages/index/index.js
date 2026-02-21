@@ -19,7 +19,7 @@ Page({
       this.setData({ showLaunchAnimation: true });
       this.launchTimer = setTimeout(() => {
         this.setData({ showLaunchAnimation: false });
-      }, 1700);
+      }, 2300);
     }
   },
 
