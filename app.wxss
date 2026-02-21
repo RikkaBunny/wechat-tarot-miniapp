@@ -1,18 +1,6 @@
-:root {
-  --bg-top: #fbf8f0;
-  --bg-bottom: #f2edf9;
-  --shell: #fffdf8;
-  --ink: #2e2441;
-  --muted: #8b809e;
-  --accent: #8759c7;
-  --line: #ddd2f2;
-  --ok: #2f9e73;
-  --warn: #be5e46;
-}
-
 page {
-  background: linear-gradient(180deg, var(--bg-top) 0%, var(--bg-bottom) 100%);
-  color: var(--ink);
+  background: linear-gradient(180deg, #fbf8f0 0%, #f2edf9 100%);
+  color: #2e2441;
   font-family: "PingFang SC", "Microsoft YaHei", sans-serif;
   min-height: 100%;
 }
@@ -22,7 +10,7 @@ page {
 }
 
 .screen-shell {
-  background: var(--shell);
+  background: #fffdf8;
   border-radius: 28rpx;
   border: 1rpx solid #e8def7;
   box-shadow: 0 10rpx 24rpx rgba(46, 36, 65, 0.08);
@@ -37,7 +25,7 @@ page {
 .subtitle {
   margin-top: 16rpx;
   font-size: 24rpx;
-  color: var(--muted);
+  color: #8b809e;
   line-height: 1.4;
 }
 
@@ -58,7 +46,7 @@ button::after {
 .primary-btn {
   width: 100%;
   margin-top: 0;
-  background: var(--accent);
+  background: #8759c7;
   color: #fff;
   border-radius: 999rpx;
   font-size: 30rpx;
@@ -71,8 +59,8 @@ button::after {
   width: 100%;
   margin-top: 0;
   border-radius: 999rpx;
-  border: 1rpx solid var(--accent);
-  color: var(--accent);
+  border: 1rpx solid #8759c7;
+  color: #8759c7;
   background: #fff;
   font-size: 30rpx;
   font-weight: 700;
