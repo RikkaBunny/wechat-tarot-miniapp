@@ -1,7 +1,7 @@
 <view class="container">
   <view class="screen-shell index-shell">
-    <view class="title">塔罗随身占卜</view>
-    <view class="subtitle">随时随地，抽取你的今日指引</view>
+    <view class="title home-title">塔罗随身占卜</view>
+    <view class="subtitle home-subtitle">随时随地，抽取你的今日指引</view>
 
     <view class="label">你想占卜什么？</view>
     <textarea
