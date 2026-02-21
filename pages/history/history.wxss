@@ -31,5 +31,5 @@
 
 .empty {
   text-align: center;
-  margin-top: 100rpx;
+  margin-top: 140rpx;
 }

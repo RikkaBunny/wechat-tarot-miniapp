@@ -1,7 +1,3 @@
-.hero {
-  margin-top: 8rpx;
-}
-
 .question-input {
   width: 100%;
   min-height: 180rpx;
@@ -19,6 +15,7 @@
   border-radius: 18rpx;
   padding: 20rpx 18rpx;
   font-size: 28rpx;
+  color: #4d3d6f;
 }
 
 .switch-row {
@@ -30,18 +27,9 @@
   font-size: 27rpx;
 }
 
-.tips {
-  margin-top: 22rpx;
-}
-
-.tips-title {
-  font-size: 30rpx;
-  font-weight: 600;
-  margin-bottom: 10rpx;
-}
-
-.tip-item {
-  font-size: 26rpx;
-  color: #6d6280;
-  line-height: 1.7;
+.light-note {
+  margin-top: 18rpx;
+  text-align: center;
+  color: #8b809e;
+  font-size: 23rpx;
 }

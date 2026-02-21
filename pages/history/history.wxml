@@ -1,5 +1,5 @@
 <view class="container">
-  <view class="panel" wx:if="{{history.length}}">
+  <view class="screen-shell" wx:if="{{history.length}}">
     <view class="title">最近占卜</view>
     <view class="subtitle">点击任意记录可查看详情</view>
 
@@ -15,7 +15,7 @@
     <button class="secondary-btn" bindtap="clearHistory">清空历史</button>
   </view>
 
-  <view class="panel empty" wx:else>
+  <view class="screen-shell empty" wx:else>
     <view class="title">还没有历史记录</view>
     <view class="subtitle">先去抽一组塔罗牌吧</view>
     <button class="primary-btn" bindtap="goIndex">去占卜</button>

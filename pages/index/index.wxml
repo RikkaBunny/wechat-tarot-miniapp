@@ -1,5 +1,5 @@
 <view class="container">
-  <view class="panel hero">
+  <view class="screen-shell">
     <view class="title">塔罗随身占卜</view>
     <view class="subtitle">随时随地，抽取你的今日指引</view>
 
@@ -24,12 +24,7 @@
 
     <button class="primary-btn" bindtap="startReading">开始占卜</button>
     <button class="secondary-btn" bindtap="goHistory">查看历史记录</button>
-  </view>
 
-  <view class="tips panel">
-    <view class="tips-title">使用建议</view>
-    <view class="tip-item">1. 问题尽量具体，答案会更聚焦。</view>
-    <view class="tip-item">2. 同一个问题短时间内不要重复抽牌。</view>
-    <view class="tip-item">3. 塔罗用于自我觉察，不替代现实决策责任。</view>
+    <view class="light-note">塔罗用于自我觉察，不替代现实决策责任。</view>
   </view>
 </view>

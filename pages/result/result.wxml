@@ -1,32 +1,32 @@
 <view class="container" wx:if="{{reading}}">
-  <view class="panel">
+  <view class="screen-shell">
     <view class="title">{{reading.spreadLabel}}</view>
     <view class="meta">时间：{{reading.createdAt}}</view>
     <view class="question" wx:if="{{reading.question}}">问题：{{reading.question}}</view>
     <view class="summary">{{reading.summary}}</view>
-  </view>
 
-  <view class="card-list">
-    <view class="card-item panel" wx:for="{{reading.cards}}" wx:key="index">
-      <view class="card-head">
-        <view>
-          <view class="position">{{item.position}}</view>
-          <view class="card-name">{{item.name}}</view>
+    <view class="card-list">
+      <view class="card-item" wx:for="{{reading.cards}}" wx:key="index">
+        <view class="card-head">
+          <view>
+            <view class="position">{{item.position}}</view>
+            <view class="card-name">{{item.name}}</view>
+          </view>
+          <view class="orientation {{item.reversed ? 'reversed' : 'upright'}}">{{item.orientation}}</view>
         </view>
-        <view class="orientation {{item.reversed ? 'reversed' : 'upright'}}">{{item.orientation}}</view>
+        <view class="keywords">关键词：{{item.keywords}}</view>
+        <view class="advice">建议：{{item.advice}}</view>
+        <view class="arcana">{{item.arcana}} · {{item.theme}}</view>
       </view>
-      <view class="keywords">关键词：{{item.keywords}}</view>
-      <view class="advice">建议：{{item.advice}}</view>
-      <view class="arcana">{{item.arcana}} · {{item.theme}}</view>
     </view>
-  </view>
 
-  <button class="primary-btn" bindtap="goAgain">再抽一次</button>
-  <button class="secondary-btn" bindtap="goHistory">历史记录</button>
+    <button class="primary-btn" bindtap="goAgain">再抽一次</button>
+    <button class="secondary-btn" bindtap="goHistory">历史记录</button>
+  </view>
 </view>
 
 <view class="container" wx:else>
-  <view class="panel empty">
+  <view class="screen-shell empty">
     <view class="title">暂无占卜结果</view>
     <button class="primary-btn" bindtap="goAgain">去占卜</button>
   </view>
