@@ -1,0 +1,35 @@
+<view class="container">
+  <view class="panel hero">
+    <view class="title">塔罗随身占卜</view>
+    <view class="subtitle">随时随地，抽取你的今日指引</view>
+
+    <view class="label">你想占卜什么？</view>
+    <textarea
+      class="question-input"
+      maxlength="120"
+      placeholder="例如：这次面试会顺利吗？"
+      value="{{question}}"
+      bindinput="onQuestionInput"
+    />
+
+    <view class="label">选择牌阵</view>
+    <picker mode="selector" range="{{spreadLabels}}" value="{{spreadIndex}}" bindchange="onSpreadChange">
+      <view class="picker">{{spreadLabels[spreadIndex]}}</view>
+    </picker>
+
+    <view class="switch-row">
+      <text>启用逆位（更细致）</text>
+      <switch checked="{{allowReversed}}" bindchange="onReverseChange" color="#8759c7" />
+    </view>
+
+    <button class="primary-btn" bindtap="startReading">开始占卜</button>
+    <button class="secondary-btn" bindtap="goHistory">查看历史记录</button>
+  </view>
+
+  <view class="tips panel">
+    <view class="tips-title">使用建议</view>
+    <view class="tip-item">1. 问题尽量具体，答案会更聚焦。</view>
+    <view class="tip-item">2. 同一个问题短时间内不要重复抽牌。</view>
+    <view class="tip-item">3. 塔罗用于自我觉察，不替代现实决策责任。</view>
+  </view>
+</view>

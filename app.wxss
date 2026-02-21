@@ -1,0 +1,61 @@
+:root {
+  --bg: #f7f3ea;
+  --card: #fffdf8;
+  --ink: #2e2441;
+  --accent: #8759c7;
+  --accent-soft: #efe6ff;
+  --muted: #8b809e;
+  --ok: #2f9e73;
+  --warn: #be5e46;
+}
+
+page {
+  background: linear-gradient(180deg, #fbf8f0 0%, #f2edf9 100%);
+  color: var(--ink);
+  font-family: "PingFang SC", "Microsoft YaHei", sans-serif;
+  min-height: 100%;
+}
+
+.container {
+  padding: 28rpx;
+}
+
+.panel {
+  background: var(--card);
+  border-radius: 24rpx;
+  padding: 24rpx;
+  box-shadow: 0 10rpx 24rpx rgba(46, 36, 65, 0.08);
+}
+
+.title {
+  font-size: 42rpx;
+  font-weight: 700;
+}
+
+.subtitle {
+  margin-top: 10rpx;
+  font-size: 26rpx;
+  color: var(--muted);
+}
+
+.label {
+  margin: 24rpx 0 14rpx;
+  font-size: 28rpx;
+  font-weight: 600;
+}
+
+.primary-btn {
+  margin-top: 30rpx;
+  background: var(--accent);
+  color: #fff;
+  border-radius: 999rpx;
+  font-size: 30rpx;
+}
+
+.secondary-btn {
+  margin-top: 16rpx;
+  border-radius: 999rpx;
+  border: 1rpx solid var(--accent);
+  color: var(--accent);
+  background: #fff;
+}

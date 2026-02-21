@@ -1,0 +1,16 @@
+{
+  "description": "塔罗随身占卜小程序",
+  "packOptions": {
+    "ignore": []
+  },
+  "setting": {
+    "urlCheck": false,
+    "es6": true,
+    "enhance": true,
+    "postcss": true,
+    "minified": true
+  },
+  "compileType": "miniprogram",
+  "simulatorType": "wechat",
+  "condition": {}
+}

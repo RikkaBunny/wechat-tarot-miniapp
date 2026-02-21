@@ -1,0 +1,47 @@
+.hero {
+  margin-top: 8rpx;
+}
+
+.question-input {
+  width: 100%;
+  min-height: 180rpx;
+  border: 1rpx solid #ddd2f2;
+  border-radius: 18rpx;
+  padding: 16rpx;
+  box-sizing: border-box;
+  font-size: 28rpx;
+  background: #fff;
+}
+
+.picker {
+  background: #fff;
+  border: 1rpx solid #ddd2f2;
+  border-radius: 18rpx;
+  padding: 20rpx 18rpx;
+  font-size: 28rpx;
+}
+
+.switch-row {
+  margin-top: 22rpx;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: #5c4f74;
+  font-size: 27rpx;
+}
+
+.tips {
+  margin-top: 22rpx;
+}
+
+.tips-title {
+  font-size: 30rpx;
+  font-weight: 600;
+  margin-bottom: 10rpx;
+}
+
+.tip-item {
+  font-size: 26rpx;
+  color: #6d6280;
+  line-height: 1.7;
+}

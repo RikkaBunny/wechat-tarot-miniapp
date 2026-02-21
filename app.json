@@ -1,0 +1,16 @@
+{
+  "pages": [
+    "pages/index/index",
+    "pages/result/result",
+    "pages/history/history"
+  ],
+  "window": {
+    "navigationBarTitleText": "塔罗随身占卜",
+    "navigationBarBackgroundColor": "#f8f5ef",
+    "navigationBarTextStyle": "black",
+    "backgroundColor": "#f8f5ef",
+    "backgroundTextStyle": "light"
+  },
+  "style": "v2",
+  "sitemapLocation": "sitemap.json"
+}
