@@ -37,6 +37,11 @@ page {
 
 button {
   border: none;
+  padding: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-sizing: border-box;
 }
 
 button::after {
@@ -52,7 +57,7 @@ button::after {
   font-size: 30rpx;
   font-weight: 700;
   height: 86rpx;
-  line-height: 86rpx;
+  line-height: 1;
 }
 
 .secondary-btn {
@@ -65,7 +70,7 @@ button::after {
   font-size: 30rpx;
   font-weight: 700;
   height: 86rpx;
-  line-height: 86rpx;
+  line-height: 1;
 }
 
 .page-caption {

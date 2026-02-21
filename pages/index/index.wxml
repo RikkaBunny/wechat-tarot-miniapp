@@ -21,7 +21,6 @@
     <button class="secondary-btn action-sub" bindtap="goHistory">查看历史记录</button>
   </view>
 
-  <view class="page-caption">首页示意图</view>
 
   <view class="launch-mask" wx:if="{{showLaunchAnimation}}" bindtap="skipLaunchAnimation">
     <view class="magic-bg">

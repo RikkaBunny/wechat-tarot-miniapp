@@ -52,14 +52,12 @@
 .action-main {
   margin-top: 74rpx;
   height: 78rpx;
-  line-height: 78rpx;
   font-size: 28rpx;
 }
 
 .action-sub {
   margin-top: 20rpx;
   height: 78rpx;
-  line-height: 78rpx;
   font-size: 28rpx;
 }
 

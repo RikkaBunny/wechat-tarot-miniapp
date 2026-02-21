@@ -38,7 +38,6 @@
     <button class="secondary-btn action-sub" bindtap="goHistory">历史记录</button>
   </view>
 
-  <view class="page-caption">结果页示意图</view>
 </view>
 
 <view class="container" wx:else>
