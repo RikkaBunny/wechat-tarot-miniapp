@@ -3,6 +3,15 @@ const tarot = require("../../utils/tarot");
 const HISTORY_KEY = "tarot_reading_history";
 const app = getApp();
 
+function randomLaunchCard() {
+  const reading = tarot.generateReading({
+    question: "",
+    spreadType: "single",
+    allowReversed: true
+  });
+  return reading.cards[0];
+}
+
 Page({
   data: {
     question: "",
@@ -10,16 +19,26 @@ Page({
     spreadOptions: tarot.getSpreadOptions(),
     spreadLabels: tarot.getSpreadOptions().map((item) => item.label),
     allowReversed: true,
-    showLaunchAnimation: false
+    showLaunchAnimation: false,
+    launchCard: {
+      name: "愚者",
+      orientation: "正位",
+      keywords: "新的开始、勇气、探索",
+      advice: "顺着当下机会行动，边做边调整。"
+    }
   },
 
   onLoad() {
     if (!app.globalData.launchAnimationShown) {
+      const launchCard = randomLaunchCard();
       app.globalData.launchAnimationShown = true;
-      this.setData({ showLaunchAnimation: true });
+      this.setData({
+        showLaunchAnimation: true,
+        launchCard
+      });
       this.launchTimer = setTimeout(() => {
         this.setData({ showLaunchAnimation: false });
-      }, 2300);
+      }, 3000);
     }
   },
 

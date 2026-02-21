@@ -21,18 +21,21 @@
     <button class="secondary-btn action-sub" bindtap="goHistory">查看历史记录</button>
   </view>
 
-
   <view class="launch-mask" wx:if="{{showLaunchAnimation}}" bindtap="skipLaunchAnimation">
     <view class="magic-bg">
       <view class="spark spark-1"></view>
       <view class="spark spark-2"></view>
       <view class="spark spark-3"></view>
       <view class="spark spark-4"></view>
+      <view class="spark spark-5"></view>
+      <view class="spark spark-6"></view>
     </view>
 
     <view class="launch-stage">
       <view class="launch-aura"></view>
       <view class="launch-card">
+        <view class="launch-sheen"></view>
+
         <view class="launch-face launch-face-back">
           <view class="card-frame card-frame-outer"></view>
           <view class="card-frame card-frame-inner"></view>
@@ -49,10 +52,14 @@
         <view class="launch-face launch-face-front">
           <view class="card-frame card-frame-outer"></view>
           <view class="card-frame card-frame-inner"></view>
-          <view class="reveal-title">命运之门已开启</view>
-          <view class="reveal-sub">点击任意位置进入占卜</view>
+          <view class="reveal-title">{{launchCard.name}}</view>
+          <view class="reveal-badge">{{launchCard.orientation}}</view>
+          <view class="reveal-sub">{{launchCard.keywords}}</view>
+          <view class="reveal-advice">{{launchCard.advice}}</view>
         </view>
       </view>
+
+      <view class="launch-tip">点击任意位置跳过</view>
     </view>
   </view>
 </view>
