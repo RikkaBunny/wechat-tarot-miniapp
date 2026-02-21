@@ -20,6 +20,8 @@ Page({
     spreadLabels: tarot.getSpreadOptions().map((item) => item.label),
     allowReversed: true,
     showLaunchAnimation: false,
+    launchSqueezed: false,
+    launchFace: "back",
     launchCard: {
       name: "愚者",
       orientation: "正位",
@@ -30,30 +32,52 @@ Page({
 
   onLoad() {
     if (!app.globalData.launchAnimationShown) {
-      const launchCard = randomLaunchCard();
       app.globalData.launchAnimationShown = true;
-      this.setData({
-        showLaunchAnimation: true,
-        launchCard
-      });
-      this.launchTimer = setTimeout(() => {
-        this.setData({ showLaunchAnimation: false });
-      }, 3000);
+      this.playLaunchAnimation();
     }
   },
 
   onUnload() {
-    if (this.launchTimer) {
-      clearTimeout(this.launchTimer);
-      this.launchTimer = null;
+    this.clearLaunchTimers();
+  },
+
+  playLaunchAnimation() {
+    this.clearLaunchTimers();
+    const launchCard = randomLaunchCard();
+
+    this.setData({
+      showLaunchAnimation: true,
+      launchSqueezed: false,
+      launchFace: "back",
+      launchCard
+    });
+
+    this.launchTimers = [
+      setTimeout(() => {
+        this.setData({ launchSqueezed: true });
+      }, 220),
+      setTimeout(() => {
+        this.setData({ launchFace: "front" });
+      }, 560),
+      setTimeout(() => {
+        this.setData({ launchSqueezed: false });
+      }, 620),
+      setTimeout(() => {
+        this.setData({ showLaunchAnimation: false });
+      }, 3200)
+    ];
+  },
+
+  clearLaunchTimers() {
+    if (!this.launchTimers || !this.launchTimers.length) {
+      return;
     }
+    this.launchTimers.forEach((timer) => clearTimeout(timer));
+    this.launchTimers = [];
   },
 
   skipLaunchAnimation() {
-    if (this.launchTimer) {
-      clearTimeout(this.launchTimer);
-      this.launchTimer = null;
-    }
+    this.clearLaunchTimers();
     this.setData({ showLaunchAnimation: false });
   },
 
