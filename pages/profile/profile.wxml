@@ -1,0 +1,56 @@
+<view class="container">
+  <view class="screen-shell profile-shell">
+    <view class="profile-head">
+      <view class="avatar">兔</view>
+      <view class="profile-meta">
+        <view class="name">{{nickname}}</view>
+        <view class="streak">连续占卜 {{streakDays}} 天</view>
+      </view>
+    </view>
+
+    <view class="feature-grid">
+      <view class="feature-card" data-name="收藏牌义" bindtap="openFeature">
+        <view class="feature-title">收藏牌义</view>
+        <view class="feature-value">{{favoriteCount}}</view>
+      </view>
+      <view class="feature-card" bindtap="goHistory">
+        <view class="feature-title">占卜历史</view>
+        <view class="feature-value">{{historyCount}}</view>
+      </view>
+    </view>
+
+    <view class="setting-group">
+      <view class="setting-row">
+        <view>
+          <view class="setting-title">每日提醒</view>
+          <view class="setting-desc">按你设置的时间推送今日抽牌提醒</view>
+        </view>
+        <switch checked="{{reminderEnabled}}" color="#c99c42" bindchange="onReminderSwitch" />
+      </view>
+
+      <picker mode="time" value="{{reminderTime}}" bindchange="onReminderTimeChange">
+        <view class="setting-row clickable">
+          <view class="setting-title">提醒时间</view>
+          <view class="setting-right">{{reminderTime}}</view>
+        </view>
+      </picker>
+
+      <view class="setting-row clickable" data-name="主题偏好" bindtap="openFeature">
+        <view class="setting-title">主题偏好</view>
+        <view class="setting-right">深紫金线</view>
+      </view>
+
+      <view class="setting-row clickable" data-name="语言设置" bindtap="openFeature">
+        <view class="setting-title">语言设置</view>
+        <view class="setting-right">简体中文</view>
+      </view>
+
+      <view class="setting-row clickable" data-name="隐私与账号" bindtap="openFeature">
+        <view class="setting-title">隐私与账号</view>
+        <view class="setting-right">查看</view>
+      </view>
+    </view>
+
+    <button class="ghost-btn logout-btn" bindtap="logout">退出登录</button>
+  </view>
+</view>

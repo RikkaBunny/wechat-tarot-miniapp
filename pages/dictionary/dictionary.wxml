@@ -1,0 +1,66 @@
+<view class="container">
+  <view class="screen-shell dictionary-shell">
+    <view class="title">牌库百科</view>
+    <view class="subtitle">搜索 78 张塔罗牌，按大阿卡纳 / 小阿卡纳与花色筛选</view>
+
+    <view class="search-row">
+      <input
+        class="search-input"
+        placeholder="搜索牌名，如：愚者 / 权杖"
+        placeholder-class="search-placeholder"
+        value="{{searchText}}"
+        bindinput="onSearchInput"
+      />
+      <button class="icon-btn {{favoritesOnly ? 'active' : ''}}" bindtap="toggleFavoritesOnly">收藏</button>
+    </view>
+
+    <scroll-view class="chip-scroll" scroll-x="true" show-scrollbar="false">
+      <view class="chip-row">
+        <view
+          class="chip {{arcanaIndex === index ? 'selected' : ''}}"
+          wx:for="{{arcanaOptions}}"
+          wx:key="index"
+          data-index="{{index}}"
+          bindtap="onArcanaChange"
+        >
+          {{item}}
+        </view>
+      </view>
+    </scroll-view>
+
+    <scroll-view class="chip-scroll suit-scroll" scroll-x="true" show-scrollbar="false">
+      <view class="chip-row">
+        <view
+          class="chip chip-soft {{suitIndex === index ? 'selected' : ''}}"
+          wx:for="{{suitOptions}}"
+          wx:key="index"
+          data-index="{{index}}"
+          bindtap="onSuitChange"
+        >
+          {{item}}
+        </view>
+      </view>
+    </scroll-view>
+
+    <view class="tool-row">
+      <button class="tool-btn" bindtap="toggleSortMode">排序：{{sortMode === 'default' ? '牌序' : '名称'}}</button>
+      <view class="count-text">共 {{filteredCards.length}} 张</view>
+    </view>
+
+    <view class="card-grid">
+      <view class="card-item" wx:for="{{filteredCards}}" wx:key="id" data-name="{{item.name}}" bindtap="onOpenCard">
+        <view class="card-cover">
+          <text class="cover-symbol">{{item.coverSymbol}}</text>
+          <button class="fav-btn {{item.favorite ? 'active' : ''}}" data-name="{{item.name}}" catchtap="onToggleFavorite">
+            {{item.favorite ? '★' : '☆'}}
+          </button>
+        </view>
+        <view class="card-name">{{item.name}}</view>
+        <view class="card-keywords">{{item.keywordPreview}}</view>
+        <view class="card-tags">{{item.arcana}} · {{item.suit}}</view>
+      </view>
+    </view>
+
+    <view class="empty" wx:if="{{!filteredCards.length}}">未找到匹配牌面，请换个关键词试试</view>
+  </view>
+</view>

@@ -122,6 +122,18 @@ Page({
     });
   },
 
+  goDictionary() {
+    wx.navigateTo({
+      url: "/pages/dictionary/dictionary"
+    });
+  },
+
+  goProfile() {
+    wx.navigateTo({
+      url: "/pages/profile/profile"
+    });
+  },
+
   saveHistory(reading) {
     try {
       const list = wx.getStorageSync(HISTORY_KEY) || [];

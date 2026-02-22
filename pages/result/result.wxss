@@ -1,107 +1,86 @@
 .result-shell {
-  margin-top: 80rpx;
+  margin-top: 50rpx;
   min-height: 1120rpx;
+  padding: 36rpx;
   box-sizing: border-box;
-  padding: 34rpx 40rpx;
 }
 
 .result-title {
-  font-size: 38rpx;
+  font-size: 40rpx;
 }
 
-.meta,
-.summary,
-.flip-tip {
-  margin-top: 20rpx;
-  line-height: 1.6;
-  color: #5f5374;
-  font-size: 22rpx;
-}
-
-.flip-tip {
-  color: #7a6e91;
-}
-
-.card-list {
-  margin-top: 30rpx;
-}
-
-.flip-card {
-  margin-bottom: 30rpx;
-  min-height: 250rpx;
-  perspective: 1200rpx;
-}
-
-.flip-inner {
-  position: relative;
-  min-height: 250rpx;
-  height: 250rpx;
-  transform-style: preserve-3d;
-  transition: transform 0.6s ease;
-}
-
-.flip-card.flipped .flip-inner {
-  transform: rotateY(180deg);
-}
-
-.flip-face {
-  position: absolute;
-  inset: 0;
+.question-box {
+  margin-top: 24rpx;
+  padding: 20rpx 22rpx;
   border-radius: 18rpx;
-  backface-visibility: hidden;
-  box-sizing: border-box;
-  padding: 18rpx 30rpx;
+  border: 1rpx solid rgba(245, 215, 151, 0.35);
+  background: rgba(19, 12, 38, 0.78);
 }
 
-.flip-front {
-  background: linear-gradient(160deg, #4a2f71, #8759c7);
-  color: #efe6ff;
-  border: 1rpx solid #9872cf;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  gap: 14rpx;
-}
-
-.front-position {
-  font-size: 24rpx;
-  opacity: 0.9;
-}
-
-.front-title {
-  font-size: 34rpx;
-  font-weight: 700;
-}
-
-.flip-back {
-  transform: rotateY(180deg);
-  background: #f8f3ff;
-}
-
-.card-head {
-  display: flex;
-  justify-content: space-between;
-  align-items: flex-start;
-}
-
-.position {
+.question-label {
   font-size: 22rpx;
-  color: #8b809e;
+  color: rgba(247, 229, 191, 0.72);
+}
+
+.question-text {
+  margin-top: 10rpx;
+  font-size: 26rpx;
+  color: #fff8ea;
+  line-height: 1.6;
+}
+
+.spread-scroll {
+  width: 100%;
+  margin-top: 20rpx;
+  white-space: nowrap;
+}
+
+.spread-cards {
+  display: flex;
+  gap: 16rpx;
+  padding-bottom: 8rpx;
+}
+
+.spread-card {
+  width: 280rpx;
+  min-height: 292rpx;
+  flex-shrink: 0;
+  border-radius: 20rpx;
+  padding: 20rpx;
+  box-sizing: border-box;
+  border: 1rpx solid rgba(245, 215, 151, 0.26);
+  background: rgba(22, 14, 43, 0.76);
+}
+
+.spread-card.active {
+  border-color: rgba(245, 215, 151, 0.6);
+  box-shadow: 0 0 0 2rpx rgba(245, 215, 151, 0.22) inset;
+}
+
+.card-position {
+  font-size: 22rpx;
+  color: rgba(247, 229, 191, 0.86);
 }
 
 .card-name {
-  margin-top: 8rpx;
-  font-size: 32rpx;
+  margin-top: 12rpx;
+  font-size: 34rpx;
+  color: #fff8ea;
   font-weight: 700;
 }
 
-.orientation {
-  width: 130rpx;
-  height: 44rpx;
-  line-height: 44rpx;
-  text-align: center;
-  border-radius: 22rpx;
-  font-size: 22rpx;
+.card-tag,
+.item-orientation {
+  margin-top: 12rpx;
+  min-width: 100rpx;
+  height: 40rpx;
+  line-height: 40rpx;
+  border-radius: 20rpx;
+  padding: 0 16rpx;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 20rpx;
 }
 
 .upright {
@@ -114,20 +93,76 @@
   background: #fff1ed;
 }
 
-.keywords,
-.advice {
-  margin-top: 12rpx;
+.card-keywords {
+  margin-top: 16rpx;
   font-size: 22rpx;
-  color: #5f5374;
+  line-height: 1.55;
+  color: rgba(247, 229, 191, 0.9);
+}
+
+.interpretation-title {
+  margin-top: 30rpx;
+  font-size: 28rpx;
+  color: #f6d897;
+}
+
+.interpretation-item {
+  margin-top: 14rpx;
+  padding: 18rpx;
+  border-radius: 18rpx;
+  border: 1rpx solid rgba(245, 215, 151, 0.2);
+  background: rgba(17, 11, 34, 0.65);
+}
+
+.item-head {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.item-position {
+  font-size: 24rpx;
+  color: #f8e4bb;
+}
+
+.item-name {
+  margin-top: 8rpx;
+  font-size: 30rpx;
+  color: #fff7e8;
+}
+
+.item-text {
+  margin-top: 8rpx;
+  font-size: 22rpx;
   line-height: 1.6;
+  color: rgba(245, 233, 208, 0.82);
 }
 
-.action-main {
+.summary-box {
+  margin-top: 24rpx;
+  padding: 22rpx;
+  border-radius: 20rpx;
+  border: 1rpx solid rgba(245, 215, 151, 0.48);
+  background: linear-gradient(180deg, rgba(45, 27, 77, 0.82), rgba(17, 11, 34, 0.85));
+}
+
+.summary-title {
+  font-size: 27rpx;
+  color: #f6d897;
+}
+
+.summary-text {
   margin-top: 10rpx;
+  font-size: 24rpx;
+  line-height: 1.68;
+  color: #f8eedb;
 }
 
-.action-sub {
-  margin-top: 18rpx;
+.action-grid {
+  margin-top: 28rpx;
+  display: flex;
+  flex-direction: column;
+  gap: 14rpx;
 }
 
 .empty {
@@ -135,5 +170,5 @@
 }
 
 .fallback-btn {
-  margin-top: 40rpx;
+  margin-top: 36rpx;
 }

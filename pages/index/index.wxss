@@ -1,71 +1,76 @@
 .index-shell {
-  margin-top: 92rpx;
-  min-height: 960rpx;
+  margin-top: 72rpx;
+  min-height: 980rpx;
+  padding: 40rpx;
   box-sizing: border-box;
-  padding: 34rpx;
 }
 
 .home-title {
-  font-size: 36rpx;
+  font-size: 44rpx;
 }
 
 .home-subtitle {
-  font-size: 22rpx;
-}
-
-.index-shell .label {
-  margin: 30rpx 0 16rpx;
-  font-size: 26rpx;
+  max-width: 540rpx;
 }
 
 .question-input {
   width: 100%;
-  height: 140rpx;
-  border: 1rpx solid #ddd2f2;
-  border-radius: 16rpx;
-  padding: 14rpx 18rpx;
+  height: 168rpx;
+  border: 1rpx solid rgba(245, 215, 151, 0.35);
+  border-radius: 20rpx;
+  padding: 18rpx 20rpx;
   box-sizing: border-box;
   font-size: 26rpx;
-  background: #fff;
+  line-height: 1.5;
+  color: #fff8ea;
+  background: rgba(20, 13, 38, 0.75);
 }
 
 .question-input::placeholder {
-  color: #9b92ab;
-  font-size: 20rpx;
+  color: rgba(247, 229, 191, 0.52);
 }
 
 .spread-label {
-  margin-top: 56rpx;
+  margin-top: 30rpx;
 }
 
 .picker {
-  background: #fff;
-  border: 1rpx solid #ddd2f2;
+  height: 76rpx;
+  line-height: 76rpx;
   border-radius: 16rpx;
+  border: 1rpx solid rgba(245, 215, 151, 0.35);
+  background: rgba(20, 13, 38, 0.8);
+  color: #f8e4bb;
+  font-size: 24rpx;
   padding: 0 18rpx;
-  font-size: 22rpx;
-  color: #4d3d6f;
-  height: 68rpx;
-  line-height: 68rpx;
 }
 
 .action-main {
-  margin-top: 74rpx;
-  height: 78rpx;
-  font-size: 28rpx;
+  margin-top: 52rpx;
 }
 
-.action-sub {
-  margin-top: 20rpx;
-  height: 78rpx;
-  font-size: 28rpx;
+.quick-grid {
+  margin-top: 22rpx;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 16rpx;
+}
+
+.quick-btn {
+  width: calc((100% - 16rpx) / 2);
+  height: 74rpx;
+  font-size: 24rpx;
+}
+
+.quick-btn.wide {
+  width: 100%;
 }
 
 .launch-mask {
   position: fixed;
   inset: 0;
   z-index: 999;
-  background: radial-gradient(circle at center, rgba(40, 26, 62, 0.72) 0%, rgba(13, 9, 24, 0.96) 76%);
+  background: radial-gradient(circle at center, rgba(44, 26, 74, 0.7) 0%, rgba(9, 5, 16, 0.97) 76%);
   display: flex;
   justify-content: center;
   align-items: center;
@@ -137,7 +142,7 @@
   width: 680rpx;
   height: 680rpx;
   border-radius: 50%;
-  background: radial-gradient(circle, rgba(160, 113, 229, 0.28) 0%, rgba(160, 113, 229, 0.02) 72%);
+  background: radial-gradient(circle, rgba(184, 135, 250, 0.24) 0%, rgba(184, 135, 250, 0.02) 72%);
 }
 
 .launch-card {

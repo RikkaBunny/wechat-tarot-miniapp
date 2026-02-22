@@ -3,53 +3,59 @@ const app = getApp();
 Page({
   data: {
     reading: null,
-    displayCards: []
+    displayCards: [],
+    activeIndex: 0
   },
 
   onShow() {
     const reading = app.globalData.currentReading || null;
-    const displayCards = reading
-      ? (reading.cards || []).map((card) => ({
-          ...card,
-          flipped: false
-        }))
-      : [];
+    const displayCards = reading ? reading.cards || [] : [];
 
     this.setData({
       reading,
-      displayCards
+      displayCards,
+      activeIndex: 0
     });
   },
 
-  onFlipCard(event) {
+  onSelectCard(event) {
     const index = Number(event.currentTarget.dataset.index);
-    const cards = this.data.displayCards.slice();
-    if (!cards[index] || cards[index].flipped) {
+    if (Number.isNaN(index)) {
       return;
     }
+    this.setData({ activeIndex: index });
+  },
 
-    cards[index].flipped = true;
-    this.setData({
-      displayCards: cards
+  saveReading() {
+    wx.showToast({
+      title: "本次结果已保存",
+      icon: "none"
     });
+  },
 
-    if (cards.every((card) => card.flipped)) {
-      wx.showToast({
-        title: "已翻完全部牌",
-        icon: "none"
-      });
-    }
+  shareReading() {
+    wx.showShareMenu({
+      withShareTicket: false,
+      menus: ["shareAppMessage", "shareTimeline"]
+    });
+    wx.showToast({
+      title: "可直接点右上角分享",
+      icon: "none"
+    });
+  },
+
+  onShareAppMessage() {
+    const reading = this.data.reading;
+    const title = reading ? `我的塔罗结果：${reading.spreadLabel}` : "塔罗每日占卜";
+    return {
+      title,
+      path: "/pages/index/index"
+    };
   },
 
   goAgain() {
     wx.reLaunch({
       url: "/pages/index/index"
-    });
-  },
-
-  goHistory() {
-    wx.navigateTo({
-      url: "/pages/history/history"
     });
   }
 });

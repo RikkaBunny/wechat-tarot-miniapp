@@ -1,0 +1,106 @@
+.profile-shell {
+  margin-top: 44rpx;
+  min-height: 1120rpx;
+  padding: 36rpx;
+  box-sizing: border-box;
+}
+
+.profile-head {
+  display: flex;
+  align-items: center;
+  gap: 18rpx;
+}
+
+.avatar {
+  width: 104rpx;
+  height: 104rpx;
+  border-radius: 50%;
+  border: 2rpx solid rgba(245, 215, 151, 0.6);
+  color: #f6d897;
+  font-size: 42rpx;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: rgba(22, 14, 43, 0.8);
+}
+
+.name {
+  font-size: 36rpx;
+  color: #fff8ea;
+}
+
+.streak {
+  margin-top: 8rpx;
+  font-size: 22rpx;
+  color: rgba(247, 229, 191, 0.78);
+}
+
+.feature-grid {
+  margin-top: 24rpx;
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 14rpx;
+}
+
+.feature-card {
+  border-radius: 16rpx;
+  border: 1rpx solid rgba(245, 215, 151, 0.28);
+  background: rgba(17, 11, 34, 0.7);
+  padding: 18rpx;
+}
+
+.feature-title {
+  font-size: 24rpx;
+  color: rgba(247, 229, 191, 0.84);
+}
+
+.feature-value {
+  margin-top: 10rpx;
+  font-size: 44rpx;
+  color: #f6d897;
+}
+
+.setting-group {
+  margin-top: 24rpx;
+  border-radius: 18rpx;
+  border: 1rpx solid rgba(245, 215, 151, 0.24);
+  background: rgba(14, 9, 28, 0.72);
+  overflow: hidden;
+}
+
+.setting-row {
+  min-height: 94rpx;
+  padding: 0 18rpx;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-bottom: 1rpx solid rgba(245, 215, 151, 0.12);
+}
+
+.setting-row:last-child {
+  border-bottom: none;
+}
+
+.setting-title {
+  font-size: 25rpx;
+  color: #f8e4bb;
+}
+
+.setting-desc {
+  margin-top: 6rpx;
+  font-size: 20rpx;
+  color: rgba(247, 229, 191, 0.62);
+}
+
+.setting-right {
+  font-size: 22rpx;
+  color: rgba(247, 229, 191, 0.72);
+}
+
+.clickable {
+  padding-right: 24rpx;
+}
+
+.logout-btn {
+  margin-top: 24rpx;
+}

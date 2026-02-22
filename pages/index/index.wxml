@@ -1,13 +1,13 @@
 <view class="container">
   <view class="screen-shell index-shell">
-    <view class="title home-title">塔罗随身占卜</view>
-    <view class="subtitle home-subtitle">随时随地，抽取你的今日指引</view>
+    <view class="title home-title">塔罗每日占卜</view>
+    <view class="subtitle home-subtitle">以深紫星图为引，抽取你今日的灵感与方向</view>
 
     <view class="label">你想占卜什么？</view>
     <textarea
       class="question-input"
       maxlength="120"
-      placeholder="例如：这次面试会顺利吗？"
+      placeholder="例如：我该怎么推进这个项目？"
       value="{{question}}"
       bindinput="onQuestionInput"
     />
@@ -18,7 +18,12 @@
     </picker>
 
     <button class="primary-btn action-main" bindtap="startReading">开始占卜</button>
-    <button class="secondary-btn action-sub" bindtap="goHistory">查看历史记录</button>
+
+    <view class="quick-grid">
+      <button class="secondary-btn quick-btn" bindtap="goDictionary">牌库百科</button>
+      <button class="secondary-btn quick-btn" bindtap="goHistory">占卜历史</button>
+      <button class="ghost-btn quick-btn wide" bindtap="goProfile">个人中心</button>
+    </view>
   </view>
 
   <view class="launch-mask" wx:if="{{showLaunchAnimation}}" bindtap="skipLaunchAnimation">

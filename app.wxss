@@ -1,38 +1,64 @@
 page {
-  background: linear-gradient(180deg, #fbf8f0 0%, #f2edf9 100%);
-  color: #2e2441;
-  font-family: "PingFang SC", "Microsoft YaHei", sans-serif;
   min-height: 100%;
+  background: radial-gradient(circle at 20% 10%, #2a1851 0%, #120b24 44%, #0b0716 100%);
+  color: #f7f2e6;
+  font-family: "PingFang SC", "Microsoft YaHei", sans-serif;
 }
 
 .container {
-  padding: 0 40rpx 40rpx;
+  min-height: 100vh;
+  padding: 28rpx;
+  box-sizing: border-box;
 }
 
 .screen-shell {
-  background: #fffdf8;
-  border-radius: 28rpx;
-  border: 1rpx solid #e8def7;
-  box-shadow: 0 10rpx 24rpx rgba(46, 36, 65, 0.08);
+  position: relative;
+  border-radius: 30rpx;
+  border: 1rpx solid rgba(245, 215, 151, 0.38);
+  background: linear-gradient(180deg, rgba(38, 24, 73, 0.9), rgba(16, 10, 32, 0.92));
+  box-shadow: 0 18rpx 48rpx rgba(4, 2, 8, 0.56);
+  overflow: hidden;
+}
+
+.screen-shell::before,
+.screen-shell::after {
+  content: "";
+  position: absolute;
+  width: 220rpx;
+  height: 220rpx;
+  border: 1rpx solid rgba(245, 215, 151, 0.2);
+  border-radius: 50%;
+  pointer-events: none;
+}
+
+.screen-shell::before {
+  top: -130rpx;
+  right: -80rpx;
+}
+
+.screen-shell::after {
+  bottom: -140rpx;
+  left: -90rpx;
 }
 
 .title {
-  font-size: 40rpx;
-  font-weight: 700;
+  font-size: 42rpx;
   line-height: 1.2;
+  font-weight: 700;
+  color: #fff7e8;
 }
 
 .subtitle {
-  margin-top: 16rpx;
-  font-size: 24rpx;
-  color: #8b809e;
-  line-height: 1.4;
+  margin-top: 14rpx;
+  font-size: 23rpx;
+  line-height: 1.5;
+  color: rgba(245, 233, 208, 0.8);
 }
 
 .label {
-  margin: 40rpx 0 20rpx;
-  font-size: 28rpx;
-  font-weight: 600;
+  margin: 34rpx 0 16rpx;
+  font-size: 26rpx;
+  color: #f5dca7;
 }
 
 button {
@@ -48,34 +74,36 @@ button::after {
   border: none;
 }
 
-.primary-btn {
+.primary-btn,
+.secondary-btn,
+.ghost-btn {
   width: 100%;
-  margin-top: 0;
-  background: #8759c7;
-  color: #fff;
+  height: 84rpx;
   border-radius: 999rpx;
-  font-size: 30rpx;
+  font-size: 28rpx;
   font-weight: 700;
-  height: 86rpx;
-  line-height: 1;
+}
+
+.primary-btn {
+  color: #2c1a07;
+  background: linear-gradient(135deg, #f6d58c, #c99c42);
 }
 
 .secondary-btn {
-  width: 100%;
-  margin-top: 0;
-  border-radius: 999rpx;
-  border: 1rpx solid #8759c7;
-  color: #8759c7;
-  background: #fff;
-  font-size: 30rpx;
-  font-weight: 700;
-  height: 86rpx;
-  line-height: 1;
+  color: #f7e5bf;
+  border: 1rpx solid rgba(245, 215, 151, 0.45);
+  background: rgba(30, 18, 56, 0.7);
+}
+
+.ghost-btn {
+  color: rgba(247, 229, 191, 0.82);
+  border: 1rpx solid rgba(245, 215, 151, 0.22);
+  background: rgba(16, 10, 32, 0.5);
 }
 
 .page-caption {
-  margin-top: 44rpx;
+  margin-top: 28rpx;
   text-align: center;
-  color: #8b809e;
+  color: rgba(245, 233, 208, 0.66);
   font-size: 22rpx;
 }

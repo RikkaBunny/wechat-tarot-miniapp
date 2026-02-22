@@ -73,7 +73,8 @@ const SPREADS = {
 function buildDeck() {
   const major = MAJOR_ARCANA.map((card) => ({
     ...card,
-    arcana: "大阿尔卡那",
+    arcana: "大阿卡纳",
+    suit: "大阿卡纳",
     theme: "人生主题"
   }));
 
@@ -84,7 +85,8 @@ function buildDeck() {
         name: `${suit.name}${rank.name}`,
         upright: `${suit.energy}：${rank.upright}`,
         reversed: `${suit.energy}：${rank.reversed}`,
-        arcana: "小阿尔卡那",
+        arcana: "小阿卡纳",
+        suit: suit.name,
         theme: suit.energy
       });
     });
@@ -166,7 +168,15 @@ function getSpreadOptions() {
   }));
 }
 
+function getDeck() {
+  return TAROT_DECK.map((card, index) => ({
+    id: `card_${index + 1}`,
+    ...card
+  }));
+}
+
 module.exports = {
   generateReading,
-  getSpreadOptions
+  getSpreadOptions,
+  getDeck
 };
