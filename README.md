@@ -6,6 +6,12 @@
 ![Status](https://img.shields.io/badge/Status-MVP-8759c7)
 ![License](https://img.shields.io/badge/License-MIT-blue)
 
+## 最新更新（2026-02-24）
+
+- 已按最新 Stitch 方案重构主视觉（深紫 + 金线）
+- 首页、结果页、历史页、牌库页、个人中心完成统一样式升级
+- 交互层级优化：核心信息更聚焦、按钮体系更一致、卡片可读性更好
+
 ## 项目亮点
 
 - 支持 4 种常用牌阵：单张指引、三张时间流、三张决策盘、关系洞察
