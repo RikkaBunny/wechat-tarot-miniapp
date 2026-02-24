@@ -29,7 +29,7 @@
 
 | 首页（提问 + 选牌阵） | 结果页（解读 + 建议） | 历史页（回看 + 管理） |
 | --- | --- | --- |
-| ![首页](docs/screenshots/index-page.svg) | ![结果页](docs/screenshots/result-page.svg) | ![历史页](docs/screenshots/history-page.svg) |
+| ![首页](docs/screenshots/index-page-v4.png) | ![结果页](docs/screenshots/result-page-v4.png) | ![历史页](docs/screenshots/history-page-v4.png) |
 
 ## 获取真实运行截图（建议）
 
@@ -62,9 +62,9 @@ wechat-tarot-miniapp/
 ├── utils/
 │   └── tarot.js    # 牌库、牌阵、解读逻辑
 └── docs/screenshots/
-    ├── index-page.svg
-    ├── result-page.svg
-    └── history-page.svg
+    ├── index-page-v4.png
+    ├── result-page-v4.png
+    └── history-page-v4.png
 ```
 
 ## 快速开始
