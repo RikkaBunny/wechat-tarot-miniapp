@@ -1,21 +1,36 @@
 <view class="container">
   <view class="screen-shell index-shell">
-    <view class="title home-title">塔罗每日占卜</view>
-    <view class="subtitle home-subtitle">以深紫星图为引，抽取你今日的灵感与方向</view>
+    <view class="screen-header">
+      <view class="header-pill">Stitch 重构版 · Tarot UI</view>
+      <view class="title home-title">塔罗每日占卜</view>
+      <view class="subtitle home-subtitle">以深紫星图为引，给今天一个更清晰的方向。</view>
+    </view>
 
-    <view class="label">你想占卜什么？</view>
-    <textarea
-      class="question-input"
-      maxlength="120"
-      placeholder="例如：我该怎么推进这个项目？"
-      value="{{question}}"
-      bindinput="onQuestionInput"
-    />
+    <view class="ornament-row">
+      <view class="ornament">日运</view>
+      <view class="ornament">事业</view>
+      <view class="ornament">关系</view>
+      <view class="ornament">情绪</view>
+    </view>
 
-    <view class="label spread-label">选择牌阵</view>
-    <picker mode="selector" range="{{spreadLabels}}" value="{{spreadIndex}}" bindchange="onSpreadChange">
-      <view class="picker">{{spreadLabels[spreadIndex]}}</view>
-    </picker>
+    <view class="panel-card">
+      <view class="label compact">你想占卜什么？</view>
+      <textarea
+        class="question-input"
+        maxlength="120"
+        placeholder="例如：我该怎么推进这个项目？"
+        value="{{question}}"
+        bindinput="onQuestionInput"
+      />
+    </view>
+
+    <view class="panel-card">
+      <view class="label compact">选择牌阵</view>
+      <picker mode="selector" range="{{spreadLabels}}" value="{{spreadIndex}}" bindchange="onSpreadChange">
+        <view class="picker">{{spreadLabels[spreadIndex]}}</view>
+      </picker>
+      <view class="picker-tip">默认支持正逆位，结果将自动保存到历史记录。</view>
+    </view>
 
     <button class="primary-btn action-main" bindtap="startReading">开始占卜</button>
 

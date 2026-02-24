@@ -1,8 +1,7 @@
+
 .profile-shell {
   margin-top: 44rpx;
   min-height: 1120rpx;
-  padding: 36rpx;
-  box-sizing: border-box;
 }
 
 .profile-head {
@@ -12,16 +11,16 @@
 }
 
 .avatar {
-  width: 104rpx;
-  height: 104rpx;
+  width: 106rpx;
+  height: 106rpx;
   border-radius: 50%;
-  border: 2rpx solid rgba(245, 215, 151, 0.6);
+  border: 2rpx solid rgba(245, 215, 151, 0.62);
   color: #f6d897;
   font-size: 42rpx;
   display: flex;
   justify-content: center;
   align-items: center;
-  background: rgba(22, 14, 43, 0.8);
+  background: rgba(22, 14, 43, 0.82);
 }
 
 .name {
@@ -36,16 +35,16 @@
 }
 
 .feature-grid {
-  margin-top: 24rpx;
+  margin-top: 22rpx;
   display: grid;
   grid-template-columns: repeat(2, minmax(0, 1fr));
-  gap: 14rpx;
+  gap: 12rpx;
 }
 
 .feature-card {
   border-radius: 16rpx;
-  border: 1rpx solid rgba(245, 215, 151, 0.28);
-  background: rgba(17, 11, 34, 0.7);
+  border: 1rpx solid rgba(245, 215, 151, 0.24);
+  background: rgba(17, 11, 34, 0.74);
   padding: 18rpx;
 }
 
@@ -61,15 +60,15 @@
 }
 
 .setting-group {
-  margin-top: 24rpx;
+  margin-top: 22rpx;
   border-radius: 18rpx;
-  border: 1rpx solid rgba(245, 215, 151, 0.24);
-  background: rgba(14, 9, 28, 0.72);
+  border: 1rpx solid rgba(245, 215, 151, 0.22);
+  background: rgba(14, 9, 28, 0.74);
   overflow: hidden;
 }
 
 .setting-row {
-  min-height: 94rpx;
+  min-height: 96rpx;
   padding: 0 18rpx;
   display: flex;
   align-items: center;

@@ -1,12 +1,29 @@
 <view class="container" wx:if="{{reading}}">
   <view class="screen-shell result-shell">
-    <view class="title result-title">{{reading.spreadLabel}}结果</view>
-    <view class="question-box" wx:if="{{reading.question}}">
-      <view class="question-label">占卜问题</view>
+    <view class="screen-header">
+      <view class="header-pill">{{reading.spreadLabel}}</view>
+      <view class="title result-title">本次占卜结果</view>
+      <view class="subtitle">{{reading.createdAt}}</view>
+    </view>
+
+    <view class="panel-card" wx:if="{{reading.question}}">
+      <view class="label compact">占卜问题</view>
       <view class="question-text">{{reading.question}}</view>
     </view>
 
-    <view class="subtitle">过去 / 现在 / 未来，请左右滑动查看牌面</view>
+    <view class="spotlight" wx:if="{{displayCards.length}}">
+      <view class="spotlight-top">
+        <view class="spotlight-position">{{displayCards[activeIndex].position}}</view>
+        <view class="spotlight-orientation {{displayCards[activeIndex].reversed ? 'reversed' : 'upright'}}">
+          {{displayCards[activeIndex].orientation}}
+        </view>
+      </view>
+      <view class="spotlight-name">{{displayCards[activeIndex].name}}</view>
+      <view class="spotlight-keywords">关键词：{{displayCards[activeIndex].keywords}}</view>
+      <view class="spotlight-advice">建议：{{displayCards[activeIndex].advice}}</view>
+    </view>
+
+    <view class="subtitle hint">左右滑动切换牌面</view>
     <scroll-view class="spread-scroll" scroll-x="true" enable-flex="true" show-scrollbar="false">
       <view class="spread-cards">
         <view
@@ -19,21 +36,9 @@
           <view class="card-position">{{item.position}}</view>
           <view class="card-name">{{item.name}}</view>
           <view class="card-tag {{item.reversed ? 'reversed' : 'upright'}}">{{item.orientation}}</view>
-          <view class="card-keywords">{{item.keywords}}</view>
         </view>
       </view>
     </scroll-view>
-
-    <view class="interpretation-title">逐张解读</view>
-    <view class="interpretation-item" wx:for="{{displayCards}}" wx:key="index">
-      <view class="item-head">
-        <view class="item-position">{{item.position}}</view>
-        <view class="item-orientation {{item.reversed ? 'reversed' : 'upright'}}">{{item.orientation}}</view>
-      </view>
-      <view class="item-name">{{item.name}}</view>
-      <view class="item-text">关键词：{{item.keywords}}</view>
-      <view class="item-text">建议：{{item.advice}}</view>
-    </view>
 
     <view class="summary-box">
       <view class="summary-title">综合建议</view>

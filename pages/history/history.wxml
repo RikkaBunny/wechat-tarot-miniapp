@@ -1,18 +1,24 @@
 <view class="container">
   <view class="screen-shell history-shell" wx:if="{{history.length}}">
-    <view class="title history-title">占卜历史</view>
-    <view class="subtitle">点击任意记录可重新查看结果</view>
+    <view class="screen-header">
+      <view class="header-pill">History</view>
+      <view class="title history-title">占卜历史</view>
+      <view class="subtitle">共 {{history.length}} 条记录，点击可重新查看牌面</view>
+    </view>
 
     <view class="history-item" wx:for="{{history}}" wx:key="id" data-id="{{item.id}}" bindtap="openReading">
       <view class="item-head">
         <view class="item-title">{{item.spreadLabel}}</view>
         <view class="item-time">{{item.createdAt}}</view>
       </view>
-      <view class="item-question" wx:if="{{item.question}}">{{item.question}}</view>
+      <view class="item-question" wx:if="{{item.question}}">问题：{{item.question}}</view>
       <view class="item-summary">{{item.summary}}</view>
     </view>
 
-    <button class="secondary-btn clear-btn" bindtap="clearHistory">清空历史</button>
+    <view class="action-row">
+      <button class="secondary-btn action-btn" bindtap="goIndex">返回占卜</button>
+      <button class="ghost-btn action-btn" bindtap="clearHistory">清空历史</button>
+    </view>
   </view>
 
   <view class="screen-shell history-shell empty" wx:else>
